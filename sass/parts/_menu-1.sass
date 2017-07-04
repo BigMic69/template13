@@ -1,15 +1,21 @@
 nav
 	position: fixed
-	+box-config(210px, auto, 10px, 0)
+	+box-config(200px, auto, 10px, 0)
 	z-index: 100
 	border-radius: 10px
+	border: thin solid #333
 	background: $clr-orange
-	h2
+	h4
+		line-height: 2em
 		text-align: center
+		color: #444
+		font-family: cursive
+		text-shadow: .5px .5px 1px #fff
+		+no-cush
 
 #menu-top
 	//+cush(0, 5px)
-	+box-config(200px, 200px, 0, 0)
+	+box-config(100%, auto, 0, 5px 0)
 	position: absolute
 	left: -240px
 	top: 20px
@@ -24,19 +30,20 @@ nav
 	li
 		position: relative
 		+menu-style
-		+box-config(100%, 40px, 8px 5px, 4px)
-		//+box-config(100%, auto, 0, 0)
+		+box-config(90%, auto, 1px 5%, 5px)
 		display: flex
 		box-sizing: border-box
 		border-radius: 15px
 		//background-color: $grey-1
 		a
 			+menu-style
-			+box-config(100%, 40px, 0, 0 0 0 10px)
+			+box-config(100%, auto, 0, 0)
 			display: flex
+			justify-content: center
 			color: #fff
 			background-color: $clr-med-grey
 			font-size: 2em
+			line-height: 40px
 			border-right: 1px hidden $clr-dark-blue
 			border-radius: 15px
 			+trans(color)
@@ -44,12 +51,15 @@ nav
 				//width: 95%
 				//+cush(0, 0)
 				background-color: rgba(4, 3, 3, .0)
-				color: #c6c6c6
+				color: #fff
 				border-right: 5px solid #fff
-				text-shadow: .5px .5px .5px $clr-grey-half
+				border-top: thin dashed #fff
+				border-bottom: thin dashed #fff
+				text-shadow: 2px 1px 2px $clr-orange
 
 nav:hover #menu-top
-	left: 20px
+	left: 5px
+	top: 10vh
 	opacity: 1
 	color: $clr-med-grey
 	z-index: 100
