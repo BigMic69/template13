@@ -4,7 +4,7 @@ nav
 	z-index: 100
 	border-radius: 10px
 	border: thin solid #333
-	background: $clr-orange
+	background: $clr-orange-half
 	h4
 		line-height: 2em
 		text-align: center
@@ -44,8 +44,12 @@ nav
 			background-color: $clr-med-grey
 			font-size: 2em
 			line-height: 40px
-			border-right: 1px hidden $clr-dark-blue
+			letter-spacing: 1.25px
+			border-right: 5px solid $clr-med-grey
+			border-top: thin dashed $clr-med-grey
+			border-bottom: thin dashed $clr-med-grey
 			border-radius: 15px
+			box-sizing: border-box
 			+trans(color)
 			&:hover
 				//width: 95%
@@ -55,7 +59,8 @@ nav
 				border-right: 5px solid #fff
 				border-top: thin dashed #fff
 				border-bottom: thin dashed #fff
-				text-shadow: 2px 1px 2px $clr-orange
+				text-shadow: 2px 1px 1px $clr-orange
+				box-sizing: border-box
 
 nav:hover #menu-top
 	left: 5px

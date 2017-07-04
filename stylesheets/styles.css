@@ -10579,7 +10579,7 @@ section {
   width: 100%;
   height: 100%;
   margin: 0 0 20vh;
-  padding: 5vh 0;
+  padding: 0 0 5vh;
   box-sizing: border-box;
   min-height: 50vh;
   font-size: 1.75em;
@@ -10678,7 +10678,7 @@ nav {
   z-index: 100;
   border-radius: 10px;
   border: thin solid #333;
-  background: #e33d00;
+  background: rgba(227, 61, 0, 0.5);
 }
 
 /* line 8, C:/wamp64/www/template13/sass/parts/_menu-1.sass */
@@ -10743,25 +10743,30 @@ nav h4 {
   background-color: #333333;
   font-size: 2em;
   line-height: 40px;
-  border-right: 1px hidden #0c0e16;
+  letter-spacing: 1.25px;
+  border-right: 5px solid #333333;
+  border-top: thin dashed #333333;
+  border-bottom: thin dashed #333333;
   border-radius: 15px;
+  box-sizing: border-box;
   transition-property: color;
   transition-duration: 1s;
   transition-delay: .1s;
   transition-timing-function: ease-in-out;
 }
 
-/* line 50, C:/wamp64/www/template13/sass/parts/_menu-1.sass */
+/* line 54, C:/wamp64/www/template13/sass/parts/_menu-1.sass */
 #menu-top li a:hover {
   background-color: rgba(4, 3, 3, 0);
   color: #fff;
   border-right: 5px solid #fff;
   border-top: thin dashed #fff;
   border-bottom: thin dashed #fff;
-  text-shadow: 2px 1px 2px #e33d00;
+  text-shadow: 2px 1px 1px #e33d00;
+  box-sizing: border-box;
 }
 
-/* line 60, C:/wamp64/www/template13/sass/parts/_menu-1.sass */
+/* line 65, C:/wamp64/www/template13/sass/parts/_menu-1.sass */
 nav:hover #menu-top {
   left: 5px;
   top: 10vh;
