@@ -1,9 +1,6 @@
 nav
 	position: fixed
-	+box-config(200px, auto, 10px, 0)
-	z-index: 100
-	border-radius: 10px
-	border: thin solid #333
+	width: 200px
 	background: $clr-orange-half
 	h4
 		line-height: 2em
@@ -13,17 +10,32 @@ nav
 		text-shadow: .5px .5px 1px #fff
 		+no-cush
 
+#myNavbar
+	position: absolute
+	top: 10vh
+	+box-config(200px, auto, 10px, 0)
+	z-index: 100
+	border-radius: 10px
+	border: thin solid #333
+	opacity: .3
+	transform: translate(-3%, -150%)
+	+trans-1
+nav:hover #myNavbar
+	//left: 5px
+	//top: 10vh
+	opacity: 1
+	color: $clr-med-grey
+	z-index: 100
+	transform: translate(-3%, -2.5vh)
+
 #menu-top
 	//+cush(0, 5px)
-	+box-config(100%, auto, 0, 5px 0)
-	position: absolute
-	left: -240px
-	top: 20px
-	background-color: $clr-dark-blue
+	+box-config(100%, 100%, 0, 5px 0)
+	background-color: $clr-dark-blue-half
 	font-family: $font-1
 	text-align: center
-	opacity: .3
-	display: block
+	display: flex
+	flex-flow: column
 	border-radius: 15px
 	z-index: 100
 	+trans-1
@@ -61,10 +73,3 @@ nav
 				border-bottom: thin dashed #fff
 				text-shadow: 2px 1px 1px $clr-orange
 				box-sizing: border-box
-
-nav:hover #menu-top
-	left: 5px
-	top: 10vh
-	opacity: 1
-	color: $clr-med-grey
-	z-index: 100
