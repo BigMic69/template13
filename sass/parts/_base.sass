@@ -1,0 +1,66 @@
+html
+  +no-cush
+  letter-spacing: 1.25px
+
+body
+	+box-fluid
+	font-style: italic
+  font-family: Ubuntu
+  font-size: 16px
+	+bg-cover-fixed
+	background-image: url(../img/f1-1.jpg)
+	#page-wrap
+		+box-fluid
+		#section-wrap
+			+box-config(100%, auto, 0, 70vh 10px 20px)
+
+section
+  +box-config(100%, 100%, 0 0 20vh, 5vh 0)
+  min-height: 50vh
+  font-size: 1.75em
+  color: #fff
+  background-color: $clr-dark-blue-half
+  @media (min-width: 769px)
+    font-size: 2.25em
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+  +box-config(100%, auto, 0, 3vh 0)
+  text-align: center
+
+
+p
+  max-height: 45vh
+  overflow: auto
+  text-align: center
+  background: $clr-med-grey
+  +outline-orange
+  color: #fff
+  +para-shadow-1
+  +cush(20px 0 40px, 20px 3px)
+  @media (min-width: 769px)
+    +box-config(80%, auto, 5vh 10% 15vh, 20px)
+    max-height: 40vh
+
+.img-1
+	background-image: url(../img/bike-1.jpg)
+	background-size: cover
+	background-position: center
+.img-2
+	background-image: url(../img/car-5.jpg)
+	background-size: cover
+	background-position: center
+.img-3
+	background-image: url(../img/car-6.jpg)
+	background-size: cover
+	background-position: center
+
+img
+	opacity: 0
+	transition: all 1s ease-in-out .1s
+	&:hover
+		opacity: 1

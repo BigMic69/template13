@@ -1,0 +1,68 @@
+@mixin bg-cover-fixed
+  background:
+    size: cover
+    position: center
+    attachment: fixed
+
+@mixin cush($margin, $padding)
+  margin: $margin
+  padding: $padding
+  box-sizing: border-box
+@mixin no-cush
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
+@mixin box-config($width, $height, $margin, $padding)
+  width: $width
+  height: $height
+  margin: $margin
+  padding: $padding
+  box-sizing: border-box
+@mixin box-fluid
+  width: 100%
+  height: 100%
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
+@mixin row-flex
+  display: flex
+  flex-flow: row wrap
+  justify-content: space-between
+
+
+@mixin menu-style
+  text-decoration: none
+  list-style: none
+
+@mixin trans-0
+  transition: .5s ease .2s
+@mixin trans-1
+  transition: 1s ease .1s
+@mixin trans($property)
+  transition:
+    property: $property
+    duration: 1s
+    delay: .1s
+    timing-function: ease-in-out
+
+
+//----- COLORS ----->>>>>
+$clr-grey: #dddddd
+$clr-grey-half: rgba(#dddddd, 0.50)
+$clr-med-grey: #333333
+$clr-med-grey-half: rgba(#333333, 0.50)
+$clr-dark-blue: #0c0e16
+$clr-dark-blue-half: rgba(#0c0e16, 0.5)
+$clr-orange: #e33d00
+$clr-orange-half: rgba(#e33d00, 0.5)
+
+@mixin outline-orange
+  border: thin solid $clr-orange
+@mixin para-shadow-1
+  text-shadow: 1px 1px 1px $clr-orange
+
+$font-1: 'Droid Serif', serif
+$font-2: 'Ubuntu', sans-serif
+$font-3: 'Playfair Display', serif

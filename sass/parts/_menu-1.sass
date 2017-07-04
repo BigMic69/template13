@@ -1,0 +1,55 @@
+nav
+	position: fixed
+	+box-config(210px, auto, 10px, 0)
+	z-index: 100
+	border-radius: 10px
+	background: $clr-orange
+	h2
+		text-align: center
+
+#menu-top
+	//+cush(0, 5px)
+	+box-config(200px, 200px, 0, 0)
+	position: absolute
+	left: -240px
+	top: 20px
+	background-color: $clr-dark-blue
+	font-family: $font-1
+	text-align: center
+	opacity: .3
+	display: block
+	border-radius: 15px
+	z-index: 100
+	+trans-1
+	li
+		position: relative
+		+menu-style
+		+box-config(100%, 40px, 8px 5px, 4px)
+		//+box-config(100%, auto, 0, 0)
+		display: flex
+		box-sizing: border-box
+		border-radius: 15px
+		//background-color: $grey-1
+		a
+			+menu-style
+			+box-config(100%, 40px, 0, 0 0 0 10px)
+			display: flex
+			color: #fff
+			background-color: $clr-med-grey
+			font-size: 2em
+			border-right: 1px hidden $clr-dark-blue
+			border-radius: 15px
+			+trans(color)
+			&:hover
+				//width: 95%
+				//+cush(0, 0)
+				background-color: rgba(4, 3, 3, .0)
+				color: #c6c6c6
+				border-right: 5px solid #fff
+				text-shadow: .5px .5px .5px $clr-grey-half
+
+nav:hover #menu-top
+	left: 20px
+	opacity: 1
+	color: $clr-med-grey
+	z-index: 100

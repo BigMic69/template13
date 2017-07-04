@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Template 13</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <link rel="shortcut icon" href="img/icon-1.jpg">
+  <link href="stylesheets/styles.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <div id="page-wrap">
+
+    <nav class="z-depth-4">
+      <h2>Menu</h2>
+      <ul id="menu-top">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Designs</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div id="section-wrap">
+
+      <!-- START SECTION -->
+      <section class="section-1">
+        <h2> Section 1</h2>
+        <p>** SCROLL TEXT **<br><br>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed numquam delectus enim ullam harum aut error qui totam, aliquid debitis? Quia eum, odit veniam iure omnis alias, dicta explicabo et natus commodi consectetur officia pariatur sunt. Facilis ipsum quasi, commodi, expedita eos officia incidunt perferendis itaque saepe, cumque vel reprehenderit at fugiat dolor veniam placeat nisi voluptates tenetur dolores iure! Delectus quos odio cum officiis, hic animi facere aspernatur fugit nemo architecto doloremque vel odit est voluptatem neque optio non enim quae corporis voluptatum dignissimos nobis tempore sunt nesciunt! Et similique iusto, doloremque vero consectetur beatae molestias totam reiciendis assumenda.</p>
+        <div class="container img-responsive img-1">
+          <img src="img/car-1.jpg" alt="" class="responsive-item">
+        </div>
+
+        <div class="container img-responsive img-2">
+          <img src="img/car-2.jpg" alt="" class="responsive-item">
+        </div>
+
+        <div class="container img-responsive img-3">
+          <img src="img/car-3.jpg" alt="" class="responsive-item">
+        </div>
+
+      </section> <!-- END SECTION 1 -->
+
+
+      <section class="section-2">
+        <h1> Section 2</h1>
+      </section>
+      <section class="section-3">
+        <h1> Section 3</h1>
+      </section>
+      <section class="section-4">
+        <h1> Section 4</h1>
+      </section>
+      <section class="section-5">
+        <h1> Section 5</h1>
+      </section>
+      <section class="section-6">
+        <h1> Section 6</h1>
+      </section>
+      <section class="section-7">
+        <h1> Section 7</h1>
+      </section>
+    </div> <!-- END SECTION-WRAP -->
+
+  </div>
+
+
+  <script>
+    document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] +
+      ':35729/livereload.js?snipver=1"></' + 'script>')
+  </script>
+
+  <script>
+    $(document).ready(function () {
+      // Add scrollspy to <body>
+      $('body').scrollspy({
+        target: ".navbar",
+        offset: 50
+      });
+
+      // Add smooth scrolling on all links inside the navbar
+      $("#myNavbar a").on('click', function (event) {
+
+        // Prevent default anchor click behavior
+        event.preventDefault();
+
+        // Store hash
+        var hash = this.hash;
+
+        // Using jQuery's animate() method to add smooth page scroll
+        // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top
+        }, 800, function () {
+
+          // Add hash (#) to URL when done scrolling (default click behavior)
+          window.location.hash = hash;
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>
