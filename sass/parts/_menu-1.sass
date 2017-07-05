@@ -5,9 +5,9 @@ nav
 	h4
 		line-height: 2em
 		text-align: center
-		color: #444
+		color: #777
 		font-family: cursive
-		text-shadow: .5px .5px 1px #fff
+		text-shadow: .5px .5px 1px $clr-orange
 		+no-cush
 
 #myNavbar
@@ -18,7 +18,7 @@ nav
 	border-radius: 10px
 	border: thin solid #333
 	opacity: .3
-	transform: translate(-3%, -150%)
+	transform: translate(-3%, -200%)
 	+trans-1
 nav:hover #myNavbar
 	//left: 5px
@@ -26,9 +26,13 @@ nav:hover #myNavbar
 	opacity: 1
 	color: $clr-med-grey
 	z-index: 100
-	transform: translate(-3%, -2.5vh)
-	@media (min-width: 769px)
-		transform: translate(-4%, -2.5vh)
+	transform: translate(-3%, -0)
+	@media (min-width: 769px) and (max-width: 992px)
+		transform: translate(-4%, -30%)
+	@media (min-width: 993px) and (max-width: 1280px)
+		transform: translate(-4%, -30%)
+	@media (min-width: 1281px)
+		transform: translate(-4%, -4%)
 
 #menu-top
 	//+cush(0, 5px)
@@ -40,7 +44,7 @@ nav:hover #myNavbar
 	flex-flow: column
 	border-radius: 15px
 	z-index: 100
-	+trans-1
+	//+trans-1
 	li
 		position: relative
 		+menu-style
@@ -55,7 +59,7 @@ nav:hover #myNavbar
 			display: flex
 			justify-content: center
 			color: #fff
-			background-color: $clr-med-grey
+			background-color: $clr-orange-half
 			font-size: 2em
 			line-height: 40px
 			letter-spacing: 1.25px

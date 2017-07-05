@@ -10550,14 +10550,51 @@ body {
   font-style: italic;
   font-style-font-family: Ubuntu;
   font-style-font-size: 16px;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  background-image: url(../img/f1-1.jpg);
+  font-style-background: #333;
 }
 
-/* line 12, C:/wamp64/www/template13/sass/parts/_base.sass */
-body #page-wrap {
+/* line 20, C:/wamp64/www/template13/sass/parts/_base.sass */
+.bg-img-container {
+  position: fixed;
+  left: -75%;
+  top: -10%;
+  width: 300%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  z-index: -1;
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  /* line 20, C:/wamp64/www/template13/sass/parts/_base.sass */
+  .bg-img-container {
+    left: -50%;
+    top: -0%;
+    width: 200%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+}
+
+@media (min-width: 993px) {
+  /* line 20, C:/wamp64/www/template13/sass/parts/_base.sass */
+  .bg-img-container {
+    left: -10%;
+    top: -0%;
+    width: 120%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+}
+
+/* line 34, C:/wamp64/www/template13/sass/parts/_base.sass */
+.bg-img-container .bg-img {
+  position: relative;
   width: 100%;
   height: 100%;
   margin: 0;
@@ -10565,21 +10602,12 @@ body #page-wrap {
   box-sizing: border-box;
 }
 
-/* line 14, C:/wamp64/www/template13/sass/parts/_base.sass */
-body #page-wrap #section-wrap {
-  width: 100%;
-  height: auto;
-  margin: 0;
-  padding: 70vh 10px 20px;
-  box-sizing: border-box;
-}
-
-/* line 17, C:/wamp64/www/template13/sass/parts/_base.sass */
+/* line 38, C:/wamp64/www/template13/sass/parts/_base.sass */
 section {
   width: 100%;
   height: 100%;
   margin: 0 0 20vh;
-  padding: 15vh 0 5vh;
+  padding: 20vh 0;
   box-sizing: border-box;
   min-height: 50vh;
   font-size: 1.75em;
@@ -10588,28 +10616,33 @@ section {
 }
 
 @media (min-width: 769px) {
-  /* line 17, C:/wamp64/www/template13/sass/parts/_base.sass */
+  /* line 38, C:/wamp64/www/template13/sass/parts/_base.sass */
   section {
     font-size: 2.25em;
   }
 }
 
-/* line 26, C:/wamp64/www/template13/sass/parts/_base.sass */
+/* line 47, C:/wamp64/www/template13/sass/parts/_base.sass */
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  width: 100%;
+  width: auto;
   height: auto;
-  margin: 0;
+  margin: 10vh 10vw 0;
   padding: 3vh 0;
   box-sizing: border-box;
   text-align: center;
+  color: #dddddd;
+  background: #333333;
+  text-shadow: 1px 1px 3px #e33d00;
+  border: thin solid #e33d00;
+  font-weight: 600;
 }
 
-/* line 36, C:/wamp64/www/template13/sass/parts/_base.sass */
+/* line 61, C:/wamp64/www/template13/sass/parts/_base.sass */
 p {
   max-height: 45vh;
   overflow: auto;
@@ -10624,7 +10657,7 @@ p {
 }
 
 @media (min-width: 769px) {
-  /* line 36, C:/wamp64/www/template13/sass/parts/_base.sass */
+  /* line 61, C:/wamp64/www/template13/sass/parts/_base.sass */
   p {
     width: 80%;
     height: auto;
@@ -10635,35 +10668,35 @@ p {
   }
 }
 
-/* line 49, C:/wamp64/www/template13/sass/parts/_base.sass */
+/* line 74, C:/wamp64/www/template13/sass/parts/_base.sass */
 .img-1 {
   background-image: url(../img/bike-1.jpg);
   background-size: cover;
   background-position: center;
 }
 
-/* line 53, C:/wamp64/www/template13/sass/parts/_base.sass */
+/* line 78, C:/wamp64/www/template13/sass/parts/_base.sass */
 .img-2 {
   background-image: url(../img/car-5.jpg);
   background-size: cover;
   background-position: center;
 }
 
-/* line 57, C:/wamp64/www/template13/sass/parts/_base.sass */
+/* line 82, C:/wamp64/www/template13/sass/parts/_base.sass */
 .img-3 {
   background-image: url(../img/car-6.jpg);
   background-size: cover;
   background-position: center;
 }
 
-/* line 62, C:/wamp64/www/template13/sass/parts/_base.sass */
-img {
+/* line 87, C:/wamp64/www/template13/sass/parts/_base.sass */
+.img-overlay {
   opacity: 0;
   transition: all 1s ease-in-out .1s;
 }
 
-/* line 65, C:/wamp64/www/template13/sass/parts/_base.sass */
-img:hover {
+/* line 90, C:/wamp64/www/template13/sass/parts/_base.sass */
+.img-overlay:hover {
   opacity: 1;
 }
 
@@ -10678,9 +10711,9 @@ nav {
 nav h4 {
   line-height: 2em;
   text-align: center;
-  color: #444;
+  color: #777;
   font-family: cursive;
-  text-shadow: .5px .5px 1px #fff;
+  text-shadow: 0.5px 0.5px 1px #e33d00;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -10699,8 +10732,8 @@ nav h4 {
   border-radius: 10px;
   border: thin solid #333;
   opacity: .3;
-  transform: translate(-3%, -150%);
-  transition: 1s ease .1s;
+  transform: translate(-3%, -200%);
+  transition: 1s ease .5s;
 }
 
 /* line 23, C:/wamp64/www/template13/sass/parts/_menu-1.sass */
@@ -10708,17 +10741,31 @@ nav:hover #myNavbar {
   opacity: 1;
   color: #333333;
   z-index: 100;
-  transform: translate(-3%, -2.5vh);
+  transform: translate(-3%, 0);
 }
 
-@media (min-width: 769px) {
+@media (min-width: 769px) and (max-width: 992px) {
   /* line 23, C:/wamp64/www/template13/sass/parts/_menu-1.sass */
   nav:hover #myNavbar {
-    transform: translate(-4%, -2.5vh);
+    transform: translate(-4%, -30%);
   }
 }
 
-/* line 33, C:/wamp64/www/template13/sass/parts/_menu-1.sass */
+@media (min-width: 993px) and (max-width: 1280px) {
+  /* line 23, C:/wamp64/www/template13/sass/parts/_menu-1.sass */
+  nav:hover #myNavbar {
+    transform: translate(-4%, -30%);
+  }
+}
+
+@media (min-width: 1281px) {
+  /* line 23, C:/wamp64/www/template13/sass/parts/_menu-1.sass */
+  nav:hover #myNavbar {
+    transform: translate(-4%, -4%);
+  }
+}
+
+/* line 37, C:/wamp64/www/template13/sass/parts/_menu-1.sass */
 #menu-top {
   width: 100%;
   height: 100%;
@@ -10732,10 +10779,9 @@ nav:hover #myNavbar {
   flex-flow: column;
   border-radius: 15px;
   z-index: 100;
-  transition: 1s ease .1s;
 }
 
-/* line 44, C:/wamp64/www/template13/sass/parts/_menu-1.sass */
+/* line 48, C:/wamp64/www/template13/sass/parts/_menu-1.sass */
 #menu-top li {
   position: relative;
   text-decoration: none;
@@ -10750,7 +10796,7 @@ nav:hover #myNavbar {
   border-radius: 15px;
 }
 
-/* line 52, C:/wamp64/www/template13/sass/parts/_menu-1.sass */
+/* line 56, C:/wamp64/www/template13/sass/parts/_menu-1.sass */
 #menu-top li a {
   text-decoration: none;
   list-style: none;
@@ -10762,7 +10808,7 @@ nav:hover #myNavbar {
   display: flex;
   justify-content: center;
   color: #fff;
-  background-color: #333333;
+  background-color: rgba(227, 61, 0, 0.5);
   font-size: 2em;
   line-height: 40px;
   letter-spacing: 1.25px;
@@ -10777,7 +10823,7 @@ nav:hover #myNavbar {
   transition-timing-function: ease-in-out;
 }
 
-/* line 68, C:/wamp64/www/template13/sass/parts/_menu-1.sass */
+/* line 72, C:/wamp64/www/template13/sass/parts/_menu-1.sass */
 #menu-top li a:hover {
   background-color: rgba(4, 3, 3, 0);
   color: #fff;
@@ -10797,16 +10843,10 @@ nav:hover #myNavbar {
 
 /* line 6, C:/wamp64/www/template13/sass/parts/_section1.sass */
 .section-1 h2 {
-  text-align: center;
   flex: 1 1 100%;
-  color: #dddddd;
-  background: #333333;
-  text-shadow: 1px 1px 3px #e33d00;
-  border: thin solid #e33d00;
-  font-weight: 600;
 }
 
-/* line 14, C:/wamp64/www/template13/sass/parts/_section1.sass */
+/* line 8, C:/wamp64/www/template13/sass/parts/_section1.sass */
 .section-1 .container {
   position: relative;
   margin: 10px auto;
@@ -10816,13 +10856,13 @@ nav:hover #myNavbar {
   border: thin solid #fff;
 }
 
-/* line 19, C:/wamp64/www/template13/sass/parts/_section1.sass */
+/* line 13, C:/wamp64/www/template13/sass/parts/_section1.sass */
 .section-1 .container img {
   width: 100%;
   height: auto;
 }
 
-/* line 22, C:/wamp64/www/template13/sass/parts/_section1.sass */
+/* line 16, C:/wamp64/www/template13/sass/parts/_section1.sass */
 .section-1 .container .overlay {
   position: absolute;
   top: 0;
@@ -10832,42 +10872,42 @@ nav:hover #myNavbar {
   transition: 2s ease .1s;
 }
 
-/* line 31, C:/wamp64/www/template13/sass/parts/_section1.sass */
+/* line 25, C:/wamp64/www/template13/sass/parts/_section1.sass */
 .section-1 .container .overlay:hover {
   opacity: 1;
 }
 
-/* line 33, C:/wamp64/www/template13/sass/parts/_section1.sass */
+/* line 27, C:/wamp64/www/template13/sass/parts/_section1.sass */
 .section-1 .container .overlay img {
   width: 100%;
   height: 100%;
 }
 
-/* line 36, C:/wamp64/www/template13/sass/parts/_section1.sass */
+/* line 30, C:/wamp64/www/template13/sass/parts/_section1.sass */
 .section-1 .container:nth-child(2) {
   flex: 1 1 80%;
 }
 
-/* line 38, C:/wamp64/www/template13/sass/parts/_section1.sass */
+/* line 32, C:/wamp64/www/template13/sass/parts/_section1.sass */
 .section-1 .container:nth-child(3) {
   flex: 1 1 80%;
 }
 
-/* line 40, C:/wamp64/www/template13/sass/parts/_section1.sass */
+/* line 34, C:/wamp64/www/template13/sass/parts/_section1.sass */
 .section-1 .container:nth-child(4) {
   flex: 1 1 80%;
 }
 
 @media (min-width: 769px) {
-  /* line 44, C:/wamp64/www/template13/sass/parts/_section1.sass */
+  /* line 38, C:/wamp64/www/template13/sass/parts/_section1.sass */
   .section-1 .container:nth-child(2) {
     flex: 1 1 30%;
   }
-  /* line 46, C:/wamp64/www/template13/sass/parts/_section1.sass */
+  /* line 40, C:/wamp64/www/template13/sass/parts/_section1.sass */
   .section-1 .container:nth-child(3) {
     flex: 1 1 30%;
   }
-  /* line 48, C:/wamp64/www/template13/sass/parts/_section1.sass */
+  /* line 42, C:/wamp64/www/template13/sass/parts/_section1.sass */
   .section-1 .container:nth-child(4) {
     flex: 1 1 30%;
   }
