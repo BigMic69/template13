@@ -10789,7 +10789,7 @@ nav h4 {
   transition: 2s ease .5s;
 }
 
-@media (min-width: 300px) and (max-width: 550px) {
+@media (min-width: 300px) and (max-width: 550px) and (orientation: portrait) {
   /* line 21, C:/wamp64/www/template13/sass/parts/_menu-1.sass */
   #myNavbar {
     transform: translate(0%, -207%) scale(0.7);
@@ -10803,10 +10803,24 @@ nav h4 {
   }
 }
 
-@media (min-width: 769px) and (max-width: 992px) {
+@media (min-width: 551px) and (max-width: 768px) and (orientation: landscape) {
   /* line 21, C:/wamp64/www/template13/sass/parts/_menu-1.sass */
   #myNavbar {
-    transform: translate(0%, -200%) scale(1);
+    transform: translate(0%, -215%) scale(0.7);
+  }
+}
+
+@media (min-width: 769px) and (max-width: 992px) and (orientation: portrait) {
+  /* line 21, C:/wamp64/www/template13/sass/parts/_menu-1.sass */
+  #myNavbar {
+    transform: translate(0%, -200%) scale(0.7);
+  }
+}
+
+@media (min-width: 769px) and (max-width: 992px) and (orientation: landscape) {
+  /* line 21, C:/wamp64/www/template13/sass/parts/_menu-1.sass */
+  #myNavbar {
+    transform: translate(0%, -200%) scale(0.7);
   }
 }
 
@@ -10824,7 +10838,7 @@ nav h4 {
   }
 }
 
-/* line 47, C:/wamp64/www/template13/sass/parts/_menu-1.sass */
+/* line 51, C:/wamp64/www/template13/sass/parts/_menu-1.sass */
 nav:hover #myNavbar {
   opacity: 1;
   color: #333333;
@@ -10833,55 +10847,55 @@ nav:hover #myNavbar {
 }
 
 @media (min-width: 300px) and (max-width: 550px) and (orientation: portrait) {
-  /* line 47, C:/wamp64/www/template13/sass/parts/_menu-1.sass */
+  /* line 51, C:/wamp64/www/template13/sass/parts/_menu-1.sass */
   nav:hover #myNavbar {
     transform: translate(0%, -7%) scale(0.7);
   }
 }
 
 @media (min-width: 551px) and (max-width: 768px) and (orientation: portrait) {
-  /* line 47, C:/wamp64/www/template13/sass/parts/_menu-1.sass */
+  /* line 51, C:/wamp64/www/template13/sass/parts/_menu-1.sass */
   nav:hover #myNavbar {
     transform: translate(0%, -15%) scale(0.7);
   }
 }
 
 @media (min-width: 551px) and (max-width: 768px) and (orientation: landscape) {
-  /* line 47, C:/wamp64/www/template13/sass/parts/_menu-1.sass */
+  /* line 51, C:/wamp64/www/template13/sass/parts/_menu-1.sass */
   nav:hover #myNavbar {
     transform: translate(0%, 0%) scale(0.7);
   }
 }
 
 @media (min-width: 769px) and (max-width: 992px) and (orientation: portrait) {
-  /* line 47, C:/wamp64/www/template13/sass/parts/_menu-1.sass */
+  /* line 51, C:/wamp64/www/template13/sass/parts/_menu-1.sass */
   nav:hover #myNavbar {
     transform: translate(0%, 0%);
   }
 }
 
 @media (min-width: 769px) and (max-width: 992px) and (orientation: landscape) {
-  /* line 47, C:/wamp64/www/template13/sass/parts/_menu-1.sass */
+  /* line 51, C:/wamp64/www/template13/sass/parts/_menu-1.sass */
   nav:hover #myNavbar {
     transform: translate(0%, 15%);
   }
 }
 
 @media (min-width: 993px) and (max-width: 1080px) and (orientation: landscape) {
-  /* line 47, C:/wamp64/www/template13/sass/parts/_menu-1.sass */
+  /* line 51, C:/wamp64/www/template13/sass/parts/_menu-1.sass */
   nav:hover #myNavbar {
     transform: translate(0%, 20%);
   }
 }
 
 @media (min-width: 1081px) and (orientation: landscape) {
-  /* line 47, C:/wamp64/www/template13/sass/parts/_menu-1.sass */
+  /* line 51, C:/wamp64/www/template13/sass/parts/_menu-1.sass */
   nav:hover #myNavbar {
     transform: translate(0%, 15%);
   }
 }
 
-/* line 76, C:/wamp64/www/template13/sass/parts/_menu-1.sass */
+/* line 80, C:/wamp64/www/template13/sass/parts/_menu-1.sass */
 #menu-top {
   width: 100%;
   height: 100%;
@@ -10897,7 +10911,7 @@ nav:hover #myNavbar {
   z-index: 100;
 }
 
-/* line 87, C:/wamp64/www/template13/sass/parts/_menu-1.sass */
+/* line 91, C:/wamp64/www/template13/sass/parts/_menu-1.sass */
 #menu-top li {
   position: relative;
   text-decoration: none;
@@ -10912,7 +10926,7 @@ nav:hover #myNavbar {
   border-radius: 15px;
 }
 
-/* line 95, C:/wamp64/www/template13/sass/parts/_menu-1.sass */
+/* line 99, C:/wamp64/www/template13/sass/parts/_menu-1.sass */
 #menu-top li a {
   text-decoration: none;
   list-style: none;
@@ -10936,7 +10950,7 @@ nav:hover #myNavbar {
   transition: .5s ease .2s;
 }
 
-/* line 111, C:/wamp64/www/template13/sass/parts/_menu-1.sass */
+/* line 115, C:/wamp64/www/template13/sass/parts/_menu-1.sass */
 #menu-top li a:hover {
   background-color: rgba(4, 3, 3, 0);
   color: #fff;

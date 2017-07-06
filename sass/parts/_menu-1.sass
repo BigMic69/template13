@@ -30,14 +30,18 @@ nav
 	transform-origin: left
 	+trans-2
 
-	@media (min-width: 300px) and (max-width: 550px)
+	@media (min-width: 300px) and (max-width: 550px) and (orientation: portrait)
 		transform: translate(-0%, -207%) scale(.7)
 
 	@media (min-width: 551px) and (max-width: 768px) and (orientation: portrait)
 		transform: translate(-0%, -215%) scale(.7)
+	@media (min-width: 551px) and (max-width: 768px) and (orientation: landscape)
+		transform: translate(-0%, -215%) scale(.7)
 
-	@media (min-width: 769px) and (max-width: 992px)
-		transform: translate(-0%, -200%) scale(1)
+	@media (min-width: 769px) and (max-width: 992px) and (orientation: portrait)
+		transform: translate(-0%, -200%) scale(.7)
+	@media (min-width: 769px) and (max-width: 992px) and (orientation: landscape)
+		transform: translate(-0%, -200%) scale(.7)
 
 	@media (min-width: 993px) and (max-width: 1280px)
 		transform: translate(-0%, -200%) scale(1)
