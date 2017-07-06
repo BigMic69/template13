@@ -1,38 +1,77 @@
 nav
 	position: fixed
 	width: 200px
+	height: auto
 	background: $clr-orange-half
+	cursor: crosshair
+	@media (max-width: 768px)
+		width: 140px
 	h4
-		line-height: 2em
+		min-height: 50px
+		+cush(0, 10% 20%)
+		display: flex
+		justify-content: center
+		align-items: center
+		//line-height: 2em
 		text-align: center
-		color: #777
+		color: #b5b5b5
 		font-family: cursive
 		text-shadow: .5px .5px 1px $clr-orange
-		+no-cush
 
 #myNavbar
 	position: absolute
-	top: 10vh
-	+box-config(200px, auto, 10px, 0)
+	top: 6vh
+	left: 0
+	+box-config(200px, auto, 1px, 0)
 	z-index: 100
 	border-radius: 10px
 	border: thin solid #333
 	opacity: .3
-	transform: translate(-3%, -200%)
-	+trans-1
+	transform-origin: left
+	+trans-2
+
+	@media (min-width: 300px) and (max-width: 550px)
+		transform: translate(-0%, -207%) scale(.7)
+
+	@media (min-width: 551px) and (max-width: 768px) and (orientation: portrait)
+		transform: translate(-0%, -215%) scale(.7)
+
+	@media (min-width: 769px) and (max-width: 992px)
+		transform: translate(-0%, -200%) scale(1)
+
+	@media (min-width: 993px) and (max-width: 1280px)
+		transform: translate(-0%, -200%) scale(1)
+
+	@media (min-width: 1281px)
+		transform: translate(-0%, -200%) scale(1)
 nav:hover #myNavbar
 	//left: 5px
 	//top: 10vh
 	opacity: 1
 	color: $clr-med-grey
 	z-index: 100
-	transform: translate(-3%, -0)
-	@media (min-width: 769px) and (max-width: 992px)
-		transform: translate(-4%, -30%)
-	@media (min-width: 993px) and (max-width: 1280px)
-		transform: translate(-4%, -30%)
-	@media (min-width: 1281px)
-		transform: translate(-4%, -4%)
+	cursor: crosshair
+	//transform-origin: left
+	//transform: translate(-3%, -0)
+
+	@media (min-width: 300px) and (max-width: 550px) and (orientation: portrait)
+		transform: translate(-0%, -7%) scale(.7)
+
+	@media (min-width: 551px) and (max-width: 768px) and (orientation: portrait)
+		transform: translate(-0%, -15%) scale(.7)
+	@media (min-width: 551px) and (max-width: 768px) and (orientation: landscape)
+		transform: translate(-0%, -0%) scale(.7)
+
+	@media (min-width: 769px) and (max-width: 992px) and (orientation: portrait)
+		transform: translate(-0%, -0%)
+	@media (min-width: 769px) and (max-width: 992px) and (orientation: landscape)
+		transform: translate(-0%, 15%)
+
+	@media (min-width: 993px) and (max-width: 1080px) and (orientation: landscape)
+		transform: translate(-0%, 20%)
+
+	@media (min-width: 1081px) and (orientation: landscape)
+		transform: translate(-0%, 15%)
 
 #menu-top
 	//+cush(0, 5px)
@@ -58,8 +97,8 @@ nav:hover #myNavbar
 			+box-config(100%, auto, 0, 0)
 			display: flex
 			justify-content: center
-			color: #fff
-			background-color: $clr-orange-half
+			color: #333
+			background-color: $clr-grey-half
 			font-size: 2em
 			line-height: 40px
 			letter-spacing: 1.25px
@@ -68,7 +107,7 @@ nav:hover #myNavbar
 			border-bottom: thin dashed $clr-med-grey
 			border-radius: 15px
 			box-sizing: border-box
-			+trans(color)
+			+trans-0
 			&:hover
 				//width: 95%
 				//+cush(0, 0)

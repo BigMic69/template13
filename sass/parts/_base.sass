@@ -6,7 +6,7 @@ body
 	+box-fluid
 	font-style: italic
   font-family: Ubuntu
-  font-size: 16px
+  font-size: 16.1803398875px
   background: #333
   //z-index: -2
 	//+bg-cover-fixed
@@ -15,28 +15,30 @@ body
     +box-fluid
     background: #333
     #section-wrap
-      +box-config(100%, auto, 0, 0 10px 20px)
+      +box-config(100%, auto, 0, 0 1em 20px)
 
 .bg-img-container
   position: fixed
-  left: -75%
-  top: -10%
-  +box-config(300%, auto, 0, 0)
+  left: -0%
+  top: -20%
+  +box-config(120%, auto, 0, 0)
   z-index: -1
   @media (min-width: 769px) and (max-width: 992px)
-    left: -50%
-    top: -0%
-    +box-config(200%, auto, 0, 0)
-  @media (min-width: 993px)
-    left: -10%
-    top: -0%
+    left: -0%
+    top: -15%
     +box-config(120%, auto, 0, 0)
+  @media (min-width: 993px)
+    left: -0%
+    top: -100%
+    +box-config(100%, auto, 0, 0)
+    opacity: 1
+    filter:
   .bg-img
     position: relative
     +box-fluid
 
 section
-  +box-config(100%, 100%, 0 0 20vh, 20vh 0)
+  +box-config(100%, 100%, 0, 30vh 20px)
   min-height: 50vh
   font-size: 1.75em
   color: #fff
@@ -50,42 +52,39 @@ h3,
 h4,
 h5,
 h6
-  +box-config(auto, auto, 10vh 10vw 0, 3vh 0)
+  +box-config(auto, auto, 10vh auto 0, 3vh 0)
   text-align: center
   color: $clr-grey
   background: $clr-med-grey
   text-shadow: 1px 1px 3px $clr-orange
   +outline-orange
   font-weight: 600
+  @media (min-width: 300px) and (max-width: 550px)
+    font-size: 1.5em
+  @media (min-width: 551px) and (max-width: 768px)
+    font-size: 1.75em
+  @media (min-width: 769px) and (max-width: 992px)
+    font-size: 2em
+  @media (min-width: 993px)
+    font-size: 2.25em
 
 p
   max-height: 45vh
   overflow: auto
+  font-size: 1em
   text-align: center
   background: $clr-med-grey
-  +outline-orange
   color: #fff
+  +outline-orange
   +para-shadow-1
   +cush(20px 0 40px, 20px 3px)
-  @media (min-width: 769px)
-    +box-config(80%, auto, 5vh 10% 15vh, 20px)
+  @media (min-width: 300px) and (max-width: 550px)
+    font-size: .75em
+  @media (min-width: 551px) and (max-width: 768px)
+    font-size: .875em
+  @media (min-width: 769px) and (max-width: 992px)
+    +box-config(80%, auto, 5vh 4em 15vh, 20px)
     max-height: 40vh
-
-.img-1
-	background-image: url(../img/bike-1.jpg)
-	background-size: cover
-	background-position: center
-.img-2
-	background-image: url(../img/car-5.jpg)
-	background-size: cover
-	background-position: center
-.img-3
-	background-image: url(../img/car-6.jpg)
-	background-size: cover
-	background-position: center
-
-.img-overlay
-	opacity: 0
-	transition: all 1s ease-in-out .1s
-	&:hover
-		opacity: 1
+    font-size: 1em
+  @media (min-width: 993px)
+    font-size: 1.125em
