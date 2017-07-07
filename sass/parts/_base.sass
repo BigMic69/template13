@@ -3,17 +3,17 @@ html
   letter-spacing: 1.25px
 
 body
-	+box-fluid
-	font-style: italic
+  +box-fluid
+  font-style: italic
   font-family: Ubuntu
   font-size: 16.1803398875px
-  background: #333
+  //background: transparentize(#333, .5)
   //z-index: -2
-	//+bg-cover-fixed
-	//background-image: url(../img/f1-1.jpg)
+  +bg-cover-fixed
+  background-image: url(../img/image-mix-01.png)
   #page-wrap
     +box-fluid
-    background: #333
+    background: transparentize(#444, .9)
     #section-wrap
       +box-config(100%, auto, 0, 0 1em 20px)
 
@@ -23,31 +23,31 @@ body
   top: -0%
   +box-config(100%, auto, 0, 0)
   z-index: -1
-  @media (min-width: 769px) and (max-width: 992px)
+  @media (max-width: 992px) and (orientation: portrait)
     left: -0%
     top: -0%
     +box-config(100%, auto, 0, 0)
-  @media (max-width: 992px) and (orientation: landscape)
+    .bg-img.hidden
+      opacity: 1
+      transition: all 1s ease-in-out .1s
+  //@media (max-width: 992px) and (orientation: landscape)
     left: -0%
     top: -75%
     +box-config(100%, auto, 0, 0)
     opacity: 1
-    filter:
-  .bg-img
-    position: relative
-    +box-fluid
+    .bg-img.hidden
+      position: relative
+      +box-fluid
   @media (min-width: 993px) and (orientation: landscape)
-  	background-image: url(../img/image-mix-01.png)
-  	background-size: 100% auto
+    background-image: url(../img/image-mix-01.png)
+    background-size: 100% auto
     background-attachment: fixed
-  	background-position: 40% 0%
+    background-position: 40% 0%
     background-repeat: no-repeat
     opacity: 1
-  .bg-img
-  	opacity: 1
-  	transition: all 1s ease-in-out .1s
-  	&:hover
-  	//opacity: 1
+    .bg-img.hidden
+      opacity: 0
+      transition: all 1s ease-in-out .1s
 
 section
   +box-config(100%, 100%, 0, 40vh 20px)
@@ -56,7 +56,7 @@ section
   color: #fff
   background-color: $clr-dark-blue-half
   @media (min-width: 769px)
-    font-size: 2.25em
+    //font-size: 2.25em
 
 h1,
 h2,
