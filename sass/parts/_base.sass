@@ -10,32 +10,46 @@ body
   //background: transparentize(#333, .5)
   //z-index: -2
   +bg-cover-fixed
-  background-image: url(../img/image-mix-01.png)
+  //background-image: url(../img/image-mix-01.png)
   #page-wrap
     +box-fluid
     background: transparentize(#444, .9)
+    @media (max-width: 768px) and (orientation: portrait)
+      .bg-img-container
+        transform: scale(1.3)
+        .bg-img
+          transform: scale(1.3)
+          visibility: visible
+    @media (min-width: 769px)
+      +bg-cover-fixed
+      background-image: url(../img/image-mix-01.png)
+
     #section-wrap
       +box-config(100%, auto, 0, 0 1em 20px)
 
 .bg-img-container
   position: fixed
   left: -0%
-  top: -0%
+  top: -6%
+  height: 100vh
+  visibility: visible
   +box-config(100%, auto, 0, 0)
   z-index: -1
+  .bg-img
+    visibility: visible
   @media (max-width: 992px) and (orientation: portrait)
     left: -0%
-    top: -0%
+    bottom: -0%
     +box-config(100%, auto, 0, 0)
-    .bg-img.hidden
+    //.bg-img.hidden
       opacity: 1
       transition: all 1s ease-in-out .1s
-  //@media (max-width: 992px) and (orientation: landscape)
+  @media (max-width: 992px) and (orientation: landscape)
     left: -0%
     top: -75%
     +box-config(100%, auto, 0, 0)
     opacity: 1
-    .bg-img.hidden
+    //.bg-img.hidden
       position: relative
       +box-fluid
   @media (min-width: 993px) and (orientation: landscape)
@@ -46,17 +60,17 @@ body
     background-repeat: no-repeat
     opacity: 1
     .bg-img.hidden
-      opacity: 0
+      opacity: 1
       transition: all 1s ease-in-out .1s
 
 section
-  +box-config(100%, 100%, 0, 40vh 20px)
+  +box-config(100%, 100%, 0, 10vh 20px)
   min-height: 50vh
   font-size: 1.75em
   color: #fff
   background-color: $clr-dark-blue-half
-  @media (min-width: 769px)
-    //font-size: 2.25em
+  @media (min-width: 993px) and (orientation: landscape)
+    +box-config(100%, 100%, 0, 40vh 20px)
 
 h1,
 h2,
