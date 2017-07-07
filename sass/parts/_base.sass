@@ -20,25 +20,37 @@ body
 .bg-img-container
   position: fixed
   left: -0%
-  top: -20%
-  +box-config(120%, auto, 0, 0)
+  top: -0%
+  +box-config(100%, auto, 0, 0)
   z-index: -1
   @media (min-width: 769px) and (max-width: 992px)
     left: -0%
-    top: -15%
-    +box-config(120%, auto, 0, 0)
-  @media (min-width: 993px)
+    top: -0%
+    +box-config(100%, auto, 0, 0)
+  @media (max-width: 992px) and (orientation: landscape)
     left: -0%
-    top: -100%
+    top: -75%
     +box-config(100%, auto, 0, 0)
     opacity: 1
     filter:
   .bg-img
     position: relative
     +box-fluid
+  @media (min-width: 993px) and (orientation: landscape)
+  	background-image: url(../img/image-mix-01.png)
+  	background-size: 100% auto
+    background-attachment: fixed
+  	background-position: 40% 0%
+    background-repeat: no-repeat
+    opacity: 1
+  .bg-img
+  	opacity: 1
+  	transition: all 1s ease-in-out .1s
+  	&:hover
+  	//opacity: 1
 
 section
-  +box-config(100%, 100%, 0, 30vh 20px)
+  +box-config(100%, 100%, 0, 40vh 20px)
   min-height: 50vh
   font-size: 1.75em
   color: #fff

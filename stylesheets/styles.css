@@ -10557,8 +10557,8 @@ body {
 .bg-img-container {
   position: fixed;
   left: -0%;
-  top: -20%;
-  width: 120%;
+  top: -0%;
+  width: 100%;
   height: auto;
   margin: 0;
   padding: 0;
@@ -10570,8 +10570,8 @@ body {
   /* line 20, C:/wamp64/www/template13/sass/parts/_base.sass */
   .bg-img-container {
     left: -0%;
-    top: -15%;
-    width: 120%;
+    top: -0%;
+    width: 100%;
     height: auto;
     margin: 0;
     padding: 0;
@@ -10579,11 +10579,11 @@ body {
   }
 }
 
-@media (min-width: 993px) {
+@media (max-width: 992px) and (orientation: landscape) {
   /* line 20, C:/wamp64/www/template13/sass/parts/_base.sass */
   .bg-img-container {
     left: -0%;
-    top: -100%;
+    top: -75%;
     width: 100%;
     height: auto;
     margin: 0;
@@ -10603,27 +10603,45 @@ body {
   box-sizing: border-box;
 }
 
-/* line 40, C:/wamp64/www/template13/sass/parts/_base.sass */
+@media (min-width: 993px) and (orientation: landscape) {
+  /* line 20, C:/wamp64/www/template13/sass/parts/_base.sass */
+  .bg-img-container {
+    background-image: url(../img/image-mix-01.png);
+    background-size: 100% auto;
+    background-size-background-attachment: fixed;
+    background-position: 40% 0%;
+    background-position-background-repeat: no-repeat;
+    background-position-opacity: 1;
+  }
+}
+
+/* line 46, C:/wamp64/www/template13/sass/parts/_base.sass */
+.bg-img-container .bg-img {
+  opacity: 1;
+  transition: all 1s ease-in-out .1s;
+}
+
+/* line 52, C:/wamp64/www/template13/sass/parts/_base.sass */
 section {
   width: 100%;
   height: 100%;
   margin: 0;
-  padding: 30vh 20px;
+  padding: 40vh 20px;
   box-sizing: border-box;
   min-height: 50vh;
   font-size: 1.75em;
   color: #fff;
-  background-color: rgba(12, 14, 22, 0.5);
+  background-color: rgba(12, 14, 22, 0.15);
 }
 
 @media (min-width: 769px) {
-  /* line 40, C:/wamp64/www/template13/sass/parts/_base.sass */
+  /* line 52, C:/wamp64/www/template13/sass/parts/_base.sass */
   section {
     font-size: 2.25em;
   }
 }
 
-/* line 49, C:/wamp64/www/template13/sass/parts/_base.sass */
+/* line 61, C:/wamp64/www/template13/sass/parts/_base.sass */
 h1,
 h2,
 h3,
@@ -10644,7 +10662,7 @@ h6 {
 }
 
 @media (min-width: 300px) and (max-width: 550px) {
-  /* line 49, C:/wamp64/www/template13/sass/parts/_base.sass */
+  /* line 61, C:/wamp64/www/template13/sass/parts/_base.sass */
   h1,
   h2,
   h3,
@@ -10656,7 +10674,7 @@ h6 {
 }
 
 @media (min-width: 551px) and (max-width: 768px) {
-  /* line 49, C:/wamp64/www/template13/sass/parts/_base.sass */
+  /* line 61, C:/wamp64/www/template13/sass/parts/_base.sass */
   h1,
   h2,
   h3,
@@ -10668,7 +10686,7 @@ h6 {
 }
 
 @media (min-width: 769px) and (max-width: 992px) {
-  /* line 49, C:/wamp64/www/template13/sass/parts/_base.sass */
+  /* line 61, C:/wamp64/www/template13/sass/parts/_base.sass */
   h1,
   h2,
   h3,
@@ -10680,7 +10698,7 @@ h6 {
 }
 
 @media (min-width: 993px) {
-  /* line 49, C:/wamp64/www/template13/sass/parts/_base.sass */
+  /* line 61, C:/wamp64/www/template13/sass/parts/_base.sass */
   h1,
   h2,
   h3,
@@ -10691,7 +10709,7 @@ h6 {
   }
 }
 
-/* line 71, C:/wamp64/www/template13/sass/parts/_base.sass */
+/* line 83, C:/wamp64/www/template13/sass/parts/_base.sass */
 p {
   max-height: 45vh;
   overflow: auto;
@@ -10707,21 +10725,21 @@ p {
 }
 
 @media (min-width: 300px) and (max-width: 550px) {
-  /* line 71, C:/wamp64/www/template13/sass/parts/_base.sass */
+  /* line 83, C:/wamp64/www/template13/sass/parts/_base.sass */
   p {
     font-size: .75em;
   }
 }
 
 @media (min-width: 551px) and (max-width: 768px) {
-  /* line 71, C:/wamp64/www/template13/sass/parts/_base.sass */
+  /* line 83, C:/wamp64/www/template13/sass/parts/_base.sass */
   p {
     font-size: .875em;
   }
 }
 
 @media (min-width: 769px) and (max-width: 992px) {
-  /* line 71, C:/wamp64/www/template13/sass/parts/_base.sass */
+  /* line 83, C:/wamp64/www/template13/sass/parts/_base.sass */
   p {
     width: 80%;
     height: auto;
@@ -10734,7 +10752,7 @@ p {
 }
 
 @media (min-width: 993px) {
-  /* line 71, C:/wamp64/www/template13/sass/parts/_base.sass */
+  /* line 83, C:/wamp64/www/template13/sass/parts/_base.sass */
   p {
     font-size: 1.125em;
   }
@@ -10796,6 +10814,13 @@ nav h4 {
   }
 }
 
+@media (min-width: 300px) and (max-width: 550px) and (orientation: landscape) {
+  /* line 21, C:/wamp64/www/template13/sass/parts/_menu-1.sass */
+  #myNavbar {
+    transform: translate(0%, -200%) scale(0.7);
+  }
+}
+
 @media (min-width: 551px) and (max-width: 768px) and (orientation: portrait) {
   /* line 21, C:/wamp64/www/template13/sass/parts/_menu-1.sass */
   #myNavbar {
@@ -10838,7 +10863,7 @@ nav h4 {
   }
 }
 
-/* line 51, C:/wamp64/www/template13/sass/parts/_menu-1.sass */
+/* line 53, C:/wamp64/www/template13/sass/parts/_menu-1.sass */
 nav:hover #myNavbar {
   opacity: 1;
   color: #333333;
@@ -10847,62 +10872,69 @@ nav:hover #myNavbar {
 }
 
 @media (min-width: 300px) and (max-width: 550px) and (orientation: portrait) {
-  /* line 51, C:/wamp64/www/template13/sass/parts/_menu-1.sass */
+  /* line 53, C:/wamp64/www/template13/sass/parts/_menu-1.sass */
   nav:hover #myNavbar {
     transform: translate(0%, -7%) scale(0.7);
   }
 }
 
+@media (min-width: 300px) and (max-width: 550px) and (orientation: landscape) {
+  /* line 53, C:/wamp64/www/template13/sass/parts/_menu-1.sass */
+  nav:hover #myNavbar {
+    transform: translate(0%, -3%) scale(0.7);
+  }
+}
+
 @media (min-width: 551px) and (max-width: 768px) and (orientation: portrait) {
-  /* line 51, C:/wamp64/www/template13/sass/parts/_menu-1.sass */
+  /* line 53, C:/wamp64/www/template13/sass/parts/_menu-1.sass */
   nav:hover #myNavbar {
     transform: translate(0%, -15%) scale(0.7);
   }
 }
 
 @media (min-width: 551px) and (max-width: 768px) and (orientation: landscape) {
-  /* line 51, C:/wamp64/www/template13/sass/parts/_menu-1.sass */
+  /* line 53, C:/wamp64/www/template13/sass/parts/_menu-1.sass */
   nav:hover #myNavbar {
     transform: translate(0%, 0%) scale(0.7);
   }
 }
 
 @media (min-width: 769px) and (max-width: 992px) and (orientation: portrait) {
-  /* line 51, C:/wamp64/www/template13/sass/parts/_menu-1.sass */
+  /* line 53, C:/wamp64/www/template13/sass/parts/_menu-1.sass */
   nav:hover #myNavbar {
     transform: translate(0%, 0%);
   }
 }
 
 @media (min-width: 769px) and (max-width: 992px) and (orientation: landscape) {
-  /* line 51, C:/wamp64/www/template13/sass/parts/_menu-1.sass */
+  /* line 53, C:/wamp64/www/template13/sass/parts/_menu-1.sass */
   nav:hover #myNavbar {
     transform: translate(0%, 15%);
   }
 }
 
 @media (min-width: 993px) and (max-width: 1080px) and (orientation: landscape) {
-  /* line 51, C:/wamp64/www/template13/sass/parts/_menu-1.sass */
+  /* line 53, C:/wamp64/www/template13/sass/parts/_menu-1.sass */
   nav:hover #myNavbar {
     transform: translate(0%, 20%);
   }
 }
 
 @media (min-width: 1081px) and (orientation: landscape) {
-  /* line 51, C:/wamp64/www/template13/sass/parts/_menu-1.sass */
+  /* line 53, C:/wamp64/www/template13/sass/parts/_menu-1.sass */
   nav:hover #myNavbar {
     transform: translate(0%, 15%);
   }
 }
 
-/* line 80, C:/wamp64/www/template13/sass/parts/_menu-1.sass */
+/* line 84, C:/wamp64/www/template13/sass/parts/_menu-1.sass */
 #menu-top {
   width: 100%;
   height: 100%;
   margin: 0;
   padding: 5px 0;
   box-sizing: border-box;
-  background-color: rgba(12, 14, 22, 0.5);
+  background-color: rgba(12, 14, 22, 0.15);
   font-family: "Droid Serif", serif;
   text-align: center;
   display: flex;
@@ -10911,7 +10943,7 @@ nav:hover #myNavbar {
   z-index: 100;
 }
 
-/* line 91, C:/wamp64/www/template13/sass/parts/_menu-1.sass */
+/* line 95, C:/wamp64/www/template13/sass/parts/_menu-1.sass */
 #menu-top li {
   position: relative;
   text-decoration: none;
@@ -10926,7 +10958,7 @@ nav:hover #myNavbar {
   border-radius: 15px;
 }
 
-/* line 99, C:/wamp64/www/template13/sass/parts/_menu-1.sass */
+/* line 103, C:/wamp64/www/template13/sass/parts/_menu-1.sass */
 #menu-top li a {
   text-decoration: none;
   list-style: none;
@@ -10950,7 +10982,7 @@ nav:hover #myNavbar {
   transition: .5s ease .2s;
 }
 
-/* line 115, C:/wamp64/www/template13/sass/parts/_menu-1.sass */
+/* line 119, C:/wamp64/www/template13/sass/parts/_menu-1.sass */
 #menu-top li a:hover {
   background-color: rgba(4, 3, 3, 0);
   color: #fff;
@@ -11056,22 +11088,6 @@ nav:hover #myNavbar {
 /* line 62, C:/wamp64/www/template13/sass/parts/_section1.sass */
 .img-overlay:hover {
   opacity: 1;
-}
-
-@media (min-width: 993px) and (orientation: landscape) {
-  /* line 66, C:/wamp64/www/template13/sass/parts/_section1.sass */
-  .bg-img-container {
-    background-image: url(../img/f1-01.png);
-    background-size: 100%;
-    background-size-background-attachment: fixed;
-    background-position: 40% 38%;
-    background-position-background-repeat: no-repeat;
-  }
-  /* line 72, C:/wamp64/www/template13/sass/parts/_section1.sass */
-  .bg-img {
-    opacity: 0;
-    transition: all 1s ease-in-out .1s;
-  }
 }
 
 /* line 1, C:/wamp64/www/template13/sass/parts/_section2.sass */
