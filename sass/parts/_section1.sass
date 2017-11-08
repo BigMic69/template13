@@ -5,8 +5,17 @@
   justify-content: space-around
   h2
     flex: 1 1 100%
+    text-align: center
+    background: #333
+    border-bottom: 1px solid #e33d00
   p
+    width: 100%
     +space
+    background: #333
+    font-size: .75em
+    text-indent: 1em
+    @media (min-width: 993px)
+      width: 45%
   .container
     position: relative
     +cush(10px auto, 0)
@@ -50,7 +59,7 @@
   background-position: center
 .img-2
   background-image: url(../img/car-5.jpg)
-  background-size: cover
+  background-size: 100%
   background-position: center
 .img-3
   background-image: url(../img/car-6.jpg)

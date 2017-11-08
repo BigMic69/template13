@@ -1,0 +1,59 @@
+.pill-container
+  width: 100%
+  margin: 3em auto
+  border: 1px solid #999
+  @media (min-width: 993px)
+    width: 70%
+  ul
+    background: #b4b4b4
+    li a
+      font-size: 1.25em
+      color: $clr-orange
+      text-shadow: .5px 1px #333
+      &:hover
+        color: #333
+  .tab-content
+    height: auto
+    margin: 0 auto
+    padding: 1em
+    background: #333
+    h3
+      font-size: 2em
+
+.tab-content .tab-menu1-img
+  margin: 1em auto
+
+.bike-1
+  width: 30%
+  margin: 0 auto
+.fb-cover-3
+  width: 100%
+  margin: 0 auto
+  @media (min-width: 993px)
+    width: 60%
+
+//#menu2
+  display: grid
+  grid-gap: 5px
+  grid-template-columns: 1fr
+  grid-auto-rows: auto
+
+
+//#menu3
+  display: grid
+  grid-gap: 5px
+  grid-template-columns: repeat(3, 1fr)
+  h3
+    grid-column: 3 span
+  p
+    grid-column: 3 span
+
+button
+  padding: 10px 1em
+  color: #333
+  border: thin solid #333
+  +trans-0
+  &:hover
+    background: #666
+    color: #fff
+    border: thin solid $clr-orange

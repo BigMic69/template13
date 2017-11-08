@@ -1,0 +1,71 @@
+.panel-body
+  width: 100%
+  min-height: 150px
+  margin: 0 auto
+  padding: 1em
+  color: #333
+  background: rgba(#b9b9b9, .8)
+
+.panel-heading
+  +no-cush
+  .panel-title
+    +no-cush
+    border-bottom: 2px solid $clr-dark-blue
+    a
+      display: flex
+      margin: 0
+      padding: 1em 0 1em 2em
+      font-size: 1.25em
+      font-weight: 600
+      text-decoration: none !important
+      text-shadow: .5px .5px $clr-orange
+      +trans-0
+      &:hover
+        background: rgba(#333, .8)
+        color: #e7e7e7
+
+.locate li
+  margin: 1em auto
+  text-align: center
+  font-weight: 600
+  a
+    margin: 0
+    padding: .5em
+    border: 1px solid #000
+    border-radius: 5px
+    text-decoration: none
+    background: #fff
+    +trans-0
+    &:hover
+      background: rgba(#333, .8)
+      color: #e0e0e0
+      border: 1px solid $clr-orange
+
+iframe
+  width: 100%
+  margin: 0 auto
+
+.social-icons
+  display: grid
+  grid-template-columns: repeat(4, 1fr)
+  grid-template-rows: auto
+  li
+    grid-column: 1 span
+    //width: 80%
+    //height: 80%
+    margin: 5px auto 10px
+    a
+      font-size: 10px
+      text-decoration: none
+      color: #333
+      font-weight: 600
+      text-shadow: .25px .25px $clr-orange
+      &:hover
+        text-shadow: .25px .25px #e8e8e8
+      img
+        width: 50px
+        height: 50px
+        +trans-0
+        &:hover
+          transform: scale(1.2) rotateY(360deg)
+          filter: grayscale(25%)

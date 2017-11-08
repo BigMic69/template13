@@ -31,16 +31,16 @@
   justify-content: space-between
 
 @mixin space
-  +cush(10vh auto, 0)
+  +cush(1em auto 3em, 10px)
 
 @mixin menu-style
   text-decoration: none
   list-style: none
 
 @mixin trans-0
-  transition: .5s ease .2s
+  transition: .5s ease .05s
 @mixin trans-1
-  transition: 1s ease .5s
+  transition: 1s ease .1s
 @mixin trans-2
   transition: 2s ease .5s
 @mixin trans($property)
@@ -57,7 +57,7 @@ $clr-grey-half: rgba(#dddddd, 0.50)
 $clr-med-grey: #333333
 $clr-med-grey-half: rgba(#333333, 0.50)
 $clr-dark-blue: #0c0e16
-$clr-dark-blue-half: rgba(#0c0e16, 0.15)
+$clr-dark-blue-half: rgba(#0c0e16, 0.5)
 $clr-orange: #e33d00
 $clr-orange-half: rgba(#e33d00, 0.5)
 
